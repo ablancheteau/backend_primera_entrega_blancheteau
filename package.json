@@ -1,20 +1,21 @@
 {
-  "name": "backend_primera_entrega_blancheteau",
+  "name": "16---primera-practica-integradora",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/public/js/index.js"
+    "start": "node .",
+    "dev": "nodemon ."
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "express-handlebars": "^7.1.2",
-    "nodemon": "^3.1.0",
-    "socket.io": "^4.7.5",
-    "socket.io-client": "^4.7.5"
-  },
-  "description": ""
+    "mongodb": "^6.6.2",
+    "mongoose": "^7.6.12",
+    "morgan": "^1.10.0"
+  }
 }
