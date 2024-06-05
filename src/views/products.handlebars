@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productos</title>
+</head>
+<body>
+    <h1>Productos</h1>
+    <ul>
+        {{#each payload}}
+        <li>
+            {{this.name}} - ${{this.price}}
+            <button onclick="addToCart('{{this._id}}')">Agregar al Carrito</button>
+        </li>
+        {{/each}}
+    </ul>
+    {{#if hasPrevPage}}
+        <a href="?page={{prevPage}}">Anterior</a>
+    {{/if}}
+    {{#if hasNextPage}}
+        <a href="?page={{nextPage}}">Siguiente</a>
+    {{/if}}
+</body>
+</html>
