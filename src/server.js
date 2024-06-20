@@ -20,9 +20,16 @@ app.use('/products', productsRouter);
 app.use('/login', loginRouter);
 app.use('/', viewsRouter);
 
+app.use(express.static(__dirname + "/public"));
 app.engine('handlebars', handlebars.engine())
 app.set('views', __dirname + '/views')
 app.set('view engine', 'handlebars')
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use("/users", usersRouter);
+app.use("/", viewsRoutes);
 
 app.use(errorHandler);
 
